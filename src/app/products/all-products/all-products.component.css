@@ -1,0 +1,27 @@
+.banner{
+    background-image: url('https://i.ytimg.com/vi/IHDYnY9FkF4/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+   
+}
+
+.card img {
+    transition: 3s ;
+    height: 250px;
+    width: 100%;
+    padding: 20px;
+   
+}
+
+.card img:hover {
+    transition: 2s;
+    transform: scale(1.1);
+   }
+
+    .card:hover{
+        transition: 0.5s;
+    box-shadow: 0px 0px 15px -3px
+   } 
