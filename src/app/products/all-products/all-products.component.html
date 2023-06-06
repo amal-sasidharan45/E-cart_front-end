@@ -1,20 +1,27 @@
 <!-- <p>all-products works!</p> -->
 <header class="bg-dark py-5 banner">
     <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-warning ">
-            <h1 class="display-4 fw-bolder me-5">Shop in style</h1>
-            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        <div class="text-center text-white ">
+            <h1 class="display-4 fw-bolder me-5">Shop with Basketship</h1>
+            <p class="lead fw-normal text-white-50 me-5">The perfect shopping partner</p>
         </div>
     </div>
 </header>
+<div style="display: flex;justify-content: center;align-items: center;">
+    <img src="https://usercontent.aftership.com/df/51/df5112b3a9b9cdd2019c1723fba975e99935a605/track/1513569063785/logo.png" class="mt-3 text-center"   height="300px" alt="">
+
+</div>
+
  <!-- Section-->
  <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div class="col mb-5" *ngFor="let product of allproducts |filter:searchTerm:'title' ">
-                <div class="card h-100" >
+                <div class="card h-100 border-1" >
                     <!-- Product image-->
-                    <img class="card-img-top" [src]="product.image"  alt="..." />
+
+                                            <a class="mt-auto me-3" routerLink="viewproducts/{{product.id}}"> 
+                                            <img class="card-img-top" [src]="product.image"  alt="..." /> </a>
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -26,11 +33,14 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-dark mt-auto text-warning" routerLink="viewproducts/{{product.id}}"> <i class="fa-solid fa-eye"></i> View product</a></div>
+                        <!-- <div class="text-center"><a class="btn btn-dark mt-auto text-warning" routerLink="viewproducts/{{product.id}}"> <i class="fa-solid fa-eye"></i> View product</a></div> -->
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-                        <a class="btn btn-outline-dark mt-auto me-3" routerLink="viewproducts/:id"> <i class="fa-solid fa-heart text-danger"></i></a>
-                        <a (click)="addtoCart(product)" class="btn btn-outline-dark mt-auto" > <i class="fa-solid fa-cart-plus text-warning"></i></a>
+                       
+                       <a class="mt-auto me-3 btn text-white " routerLink="viewproducts/{{product.id}}" style="background-color: rgb(218, 71, 98);" > view-product </a>
+
+                        <!-- <a class="btn btn-outline-dark mt-auto me-3" routerLink="viewproducts/:id"> <i class="fa-solid fa-heart text-danger"></i></a> -->
+                        <a (click)="addtoCart(product)" class=" btn  text-white  mt-auto" style="background-color: rgb(211, 68, 94);"  >Add to cart</a>
     
                     </div>
                 </div>

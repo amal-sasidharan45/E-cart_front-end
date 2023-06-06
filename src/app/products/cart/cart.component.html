@@ -26,7 +26,7 @@
   <!-- cart with products -->
   <div class="container" *ngIf="cartproducts != 0">
     <div class="row">
-      <div class="col-md-6 mt-5 border border-2">
+      <div class="col-md-6 mt-5 border border-1 border-dark">
         <!-- table -->
         <table class="table">
           <thead>
@@ -43,7 +43,7 @@
             <tr *ngFor="let product of cartproducts; let i = index">
               <td>{{ i + 1 }}</td>
               <td>{{ product.title }}</td>
-              <td><img width="100%" [src]="product.image" alt="" /></td>
+              <td><img width="70%"  height="" [src]="product.image" alt="" /></td>
               <td>
                 <div class="d-flex">
                   <button (click)="drecrement(product.id)" class="btn">
@@ -57,7 +57,7 @@
                     class="form-control border-0"
                     readonly
                   />
-                  <button (click)="incrementcart(product.id)" class="btn">
+                  <button (click)="incrementcart(product.id)" class="btn ">
                     +
                   </button>
                 </div>
@@ -74,17 +74,20 @@
         </table>
       </div>
 
-      <div class="">
-        <div class="col-md-4  mt-5">
-          <div class="border rounded p-3">
+        <div class="col-md-4  mt-5 ms-5 ">
+          <div class="border border-dark rounded p-3">
             <h3 class="text-success f-bold">Subtotal: $ {{ totalamount }}</h3>
           </div>
+          <hr/>
+
+          <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
+
           <!-- summary -->
 
-          <hr/>
         </div>
+      </div>
+      </div>
         <div class="boder border-2 mb-3"  >
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Check Out</button>
   <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -186,6 +189,5 @@
           
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+

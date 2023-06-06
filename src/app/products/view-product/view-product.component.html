@@ -15,14 +15,15 @@
                 <p class="lead">{{prod.description}}</p>
                 <div class="d-flex">
                     <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> -->
-                    <button (click)="addtoCart(prod)" class="btn flex-shrink-0" type="button"><i class="fa-solid fa-cart-plus fs-4"></i>
-                        <i class="bi-cart-fill me-1"></i>
-                     
-                    </button>
-                    <button class="btn btn -dark text-warning flex-shrink-0 ms-2" type="button" (click)="addtowishlist()"><i class="fa-solid fa-heart text-danger fs-4"></i>
-                        <i class="bi-cart-fill me-1"></i>
+                    <!-- <button (click)="addtoCart(prod)" class="btn flex-shrink-0" type="button"><i class="fa-solid fa-cart-plus fs-4"></i>
+                        <i class="bi-cart-fill me-1"></i> -->
+                        <a (click)="addtoCart(prod)" class=" btn  text-white  mt-auto" style="background-color: rgb(211, 68, 94);"  >Add to cart</a>
+<!-- 
+                    </button> -->
+                    <a class="btn  text-white  ms-3 " style="background-color: rgb(211, 68, 94);" (click)="addtowishlist()">Add to wishlist
+                       
                       
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

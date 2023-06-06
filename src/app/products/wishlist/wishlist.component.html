@@ -34,11 +34,11 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-dark mt-auto text-warning" routerLink="viewproducts/{{product.id}}"> <i class="fa-solid fa-eye"></i> View product</a></div>
+                        <!-- <div class="text-center"><a class="btn btn-dark mt-auto text-warning" routerLink="viewproducts/{{product.id}}"> <i class="fa-solid fa-eye"></i> View product</a></div> -->
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-                        <button class="btn btn-outline-dark mt-auto me-3" (click)="deletewishlistitem(product.id)" > <i class="fa-solid fa-trash text-danger"></i></button>
-                        <a (click)="addtoCart(product)" class="btn btn-outline-dark mt-auto"> <i class="fa-solid fa-cart-plus text-warning"></i></a>
+                        <button class="btn btn-outline-dark mt-auto me-3 text-danger" (click)="deletewishlistitem(product.id)" >Delete</button>
+                        <a (click)="addtoCart(product)" class="btn btn-outline-dark mt-auto" style="color: rgb(194, 65, 86);">Add to cart</a>
     
                     </div>
                 </div>
